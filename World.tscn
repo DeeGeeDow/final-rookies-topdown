@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31, 30 )
+
+[node name="World" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 461, 343 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( -6.57672, -6.10352e-05 )
+scale = Vector2( 1.00871, 1 )
+polygon = PoolVector2Array( 814.067, 504.546, 1023.33, 601.689, 866.431, 447.707 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 1.65659, 2.22246, 1023.73, 2.22246, 1025.79, 601.012, 866.805, 446.153, 881.258, 268.581, 761.5, 113.721, 470.365, 109.592, 204.006, 70.3606, 49.1468, 365.626, 170.97, 532.874, 484.818, 539.069, 815.185, 503.967, 1023.73, 603.077, 1.65659, 603.077 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -2.06912, 3.58451, 1.20883, 600.171, 1023.93, 603.449, 815.779, 503.471, 485.157, 539.288, 170.699, 533.135, 49.5029, 366.537, 204.075, 70.7248, 470.893, 110.067, 760.832, 113.983, 880.443, 268.648, 866.739, 447.552, 815.93, 503.955, 1025.69, 602.217, 1024.51, 2.54153 )
